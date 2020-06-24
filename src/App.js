@@ -5,6 +5,7 @@ import "./App.css";
 import { items } from "./static-data";
 import ItemPage from "./ItemPage";
 import CartPage from "./CartPage";
+import ReadmeViewer from "@bit/miguelhughes.showcase.readme-viewer";
 
 function Content({ tab, onAddToCart, onRemoveFromCart, cart }) {
   switch (tab) {
@@ -60,6 +61,7 @@ const App = () => {
   const summarizedCart = summarizeCart(cart);
   return (
     <div className="App">
+      <ReadmeViewer repoName="shopping-app" />
       <Nav
         activeTab={activeTab}
         onTabChange={setActiveTab}
